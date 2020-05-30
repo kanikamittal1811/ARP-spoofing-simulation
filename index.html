@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="terminal">
+
+</div>
+
+<body>
+</body>
+<script>
+    $('.terminal').terminal({
+        cat: function (width, height) {
+            return new Promise(function (resolve) {
+                const img = $('<img src="https://placekitten.com/' +
+                    width + '/' + height + '">');
+
+                img.on('load', () => resolve(img));
+            });
+        },
+        team: function () {
+            return "pradyumn jain"
+        }
+    }, {
+            greetings: 'Bash --Terminal\\n'
+        });
+</script>
+
+</html>
