@@ -2,6 +2,17 @@
     position: fixed;
     width: 99%;
     bottom: 1%;
-    height: 220 px;
+    height: 220px;
     border: 3px solid green;
+}
+
+.laptop_1{
+    position:relative;
+    left: 1000px;
+}
+
+.router_1{
+    position:relative;
+    left: 500px;
+    top: 300px;
 }
