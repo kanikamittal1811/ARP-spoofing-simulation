@@ -1,6 +1,14 @@
-.terminal{
+.terminal-2{
     position: fixed;
-    width: 99%;
+    width: 49.5%;
+    left:50%;
+    bottom: 1%;
+    height: 220px;
+    border: 3px solid green;
+}
+.terminal-1{
+    position: fixed;
+    width: 49%;
     bottom: 1%;
     height: 220px;
     border: 3px solid green;
@@ -40,8 +48,8 @@
     top: 300px;
 }
 
-.test{
-  animation: drive 4s ease-in-out 1s 2 both alternate;
+.r_192_168_32_1{
+  animation: drive 4s ease-in-out 1s 1 both alternate;
 }
 
 @keyframes drive{
