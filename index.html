@@ -14,7 +14,11 @@
 <body>
     <img class="envelope_green env-position1" id="test1" src="images/envelope_green.png" >
     <img class="laptop_1" src="images/laptop-03.png" width="150" alt="">
+<<<<<<< HEAD
     <img class="envelope_green env-position2" src="images/envelope_green.png" >
+=======
+    <img class="envelope_green env-position2" src="images/envelope_green.png" width="150">
+>>>>>>> 80159135636501e5a2d722a054de3cb4c286de11
     <img class="router_1" src="images/router-01.png" width="150" alt="">
     <img class="laptop_2" src="images/laptop-03.png" width="150" alt="">
 </body>
@@ -34,6 +38,7 @@
         connect: function (from, to) {
             var element = document.getElementById("test1");
             element.classList.add("test");
+            setTimeout(function () { element.classList.remove("test"); }, 11000);
             return "making a connection from " + from + " to " + to;
         }
     }, {
