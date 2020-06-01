@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
-<div class="terminal terminal-1"></div>
+<div id="t1" class="terminal terminal-1"></div>
 <div class="terminal terminal-2"></div>
 
 <body>
@@ -18,6 +18,7 @@
     <img class="laptop_2" src="images/laptop-03.png" width="150" alt="">
 </body>
 <script>
+    var t1 = false;
     $('.terminal').terminal({
         cat: function (width, height) {
             return new Promise(function (resolve) {
@@ -32,9 +33,19 @@
         },
         connect: function (from, to) {
             var element = document.getElementById(from);
-            element.classList.add(to);
-            setTimeout(function () { element.classList.remove(to); }, 11000);
+            var new_to = to.split('.');
+            new_to = new_to.join('_');
+            new_to = 'r_' + new_to;
+            element.classList.add(new_to);
+            setTimeout(function () { element.classList.remove(new_to); }, 11000);
             return "making a connection from " + from + " to " + to;
+        },
+        check_connection: function (system) {
+            if (t1) {
+                return "connection estabilished";
+            } else {
+                return "connection not estabilished";
+            }
         }
     }, {
             greetings: 'Bash --Terminal\n'
