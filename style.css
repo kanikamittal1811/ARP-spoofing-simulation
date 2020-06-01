@@ -9,6 +9,12 @@
     position: absolute;
     left: 55%;
 
+    
+}
+
+.laptop_2{
+    position:relative;
+    left: 0px;
 }
 
 .env-position2{
