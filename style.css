@@ -15,16 +15,23 @@
 }
 .env-position1{
     position: absolute;
-    left: 55%;
+    left: 73%;
+    top: 13%;
     height: 63px;
     width: 70px;
 
     
 }
+.laptop_1{
+    position:absolute;
+    left: 75%;
+    top: 10%
+}
 
 .laptop_2{
-    position:relative;
-    left: 0px;
+    position:absolute;
+    left:17%;
+    top:10%;
 }
 
 .env-position2{
@@ -37,15 +44,12 @@
 
 }
 
-.laptop_1{
-    position:relative;
-    left: 1000px;
-}
+
 
 .router_1{
-    position:relative;
-    left: 500px;
-    top: 300px;
+    position:absolute;
+    left: 45%;
+    top: 50%;
 }
 
 .r_192_168_32_1{
@@ -53,6 +57,6 @@
 }
 
 @keyframes drive{
-  0%{top:0%;left: 55%;}
-  100% {top: 55%; left: 35%;}
+  0%{top:13%;left: 73%;}
+  100% {top: 50%; left: 46%;}
 }
