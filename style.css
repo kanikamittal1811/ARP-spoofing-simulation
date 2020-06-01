@@ -41,5 +41,5 @@
 
 @keyframes drive{
   0%{top:0%;left: 55%;}
-  100% {top: 55%; left: 35%; background: red;}
+  100% {top: 55%; left: 35%;}
 }

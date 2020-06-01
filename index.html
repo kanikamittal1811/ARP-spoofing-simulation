@@ -34,6 +34,7 @@
         connect: function (from, to) {
             var element = document.getElementById("test1");
             element.classList.add("test");
+            setTimeout(function () { element.classList.remove("test"); }, 11000);
             return "making a connection from " + from + " to " + to;
         }
     }, {
