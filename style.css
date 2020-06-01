@@ -43,7 +43,14 @@
     width: 70px;
 
 }
-
+.line-1{
+    position: absolute;
+    top:35%;
+    left:50%;
+    transform: rotate(145deg);
+    height: 150px;
+    width: 450px
+}
 
 
 .router_1{
@@ -58,5 +65,5 @@
 
 @keyframes drive{
   0%{top:13%;left: 73%;}
-  100% {top: 50%; left: 46%;}
+  100% {top: 53%; left: 52%;}
 }
