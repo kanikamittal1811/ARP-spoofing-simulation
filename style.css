@@ -51,6 +51,14 @@
     height: 150px;
     width: 450px
 }
+.line-2{
+    position: absolute;
+    top:37%;
+    left:20%;
+    transform: rotate(35deg);
+    height: 150px;
+    width: 450px
+}
 
 
 .router_1{
