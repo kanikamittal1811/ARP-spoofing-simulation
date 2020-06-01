@@ -16,3 +16,12 @@
     left: 500px;
     top: 300px;
 }
+
+.test{
+  animation: drive 5s ease-in-out 1s 2 both alternate;
+}
+
+@keyframes drive{
+  from{left:-300px}
+  to{left:100%}
+}

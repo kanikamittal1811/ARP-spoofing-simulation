@@ -14,7 +14,7 @@
 <body>
     <img class="envelope_green" src="images/envelope_green.png" width="150">
     <img class="laptop_1" src="images/laptop-03.png" width="150" alt="">
-    <img class="envelope_green" src="images/envelope_green.png" width="150" >
+    <img class="envelope_green" src="images/envelope_green.png" width="150">
     <img class="router_1" src="images/router-01.png" width="150" alt="">
 </body>
 <script>
@@ -31,7 +31,8 @@
             return "pradyumn jain"
         },
         connect: function (from, to) {
-
+            var element = document.getElementById("test1");
+            element.classList.add("test");
             return "making a connection from " + from + " to " + to;
         }
     }, {
