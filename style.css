@@ -60,7 +60,7 @@
 }
 
 .r_192_168_32_1{
-  animation: drive 4s ease-in-out 1s 1 both alternate;
+  animation: drive 4s ease-in-out 1s 2 both alternate;
 }
 
 @keyframes drive{
