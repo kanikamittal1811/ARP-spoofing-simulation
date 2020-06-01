@@ -8,6 +8,8 @@
 .env-position1{
     position: absolute;
     left: 55%;
+    height: 63px;
+    width: 70px;
 
     
 }
@@ -18,9 +20,12 @@
 }
 
 .env-position2{
+    visibility: hidden;
     position: absolute;
     left:35%;
     top: 55%;
+    height: 63px;
+    width: 70px;
 
 }
 
