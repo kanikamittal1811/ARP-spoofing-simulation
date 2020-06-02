@@ -14,29 +14,29 @@
     border: 3px solid green;
 }
 .env-position1{
-    position: absolute;
-    left: 73%;
-    top: 13%;
+    position: fixed;
+    left: 76.5%;
+    top: 8%;
     height: 63px;
     width: 70px;
 
     
 }
 .laptop_1{
-    position:absolute;
+    position:fixed;
     left: 75%;
-    top: 10%
+    top: 5%
 }
 
 .laptop_2{
-    position:absolute;
+    position:fixed;
     left:17%;
-    top:10%;
+    top:5%;
 }
 
 .env-position2{
     visibility: hidden;
-    position: absolute;
+    position: fixed;
     left:35%;
     top: 55%;
     height: 63px;
@@ -44,16 +44,16 @@
 
 }
 .line-1{
-    position: absolute;
-    top:35%;
+    position: fixed;
+    top:30%;
     left:50%;
     transform: rotate(145deg);
     height: 150px;
     width: 450px
 }
 .line-2{
-    position: absolute;
-    top:37%;
+    position:fixed;
+    top:32%;
     left:20%;
     transform: rotate(35deg);
     height: 150px;
@@ -62,9 +62,9 @@
 
 
 .router_1{
-    position:absolute;
+    position:fixed;
     left: 45%;
-    top: 50%;
+    top: 45%;
 }
 
 .r_192_168_32_1{
@@ -72,6 +72,6 @@
 }
 
 @keyframes drive{
-  0%{top:13%;left: 73%;}
-  100% {top: 53%; left: 52%;}
+  0%{top:8%;left: 76.5%;}
+  100% {top: 45%; left: 49.7%;}
 }
