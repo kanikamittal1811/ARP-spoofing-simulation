@@ -19,7 +19,7 @@ $('.terminal').terminal({
         if (from == "192.168.32.5" && to == "192.168.32.1") {
             var new_to = "client_1_router";
         } else {
-            this.echo($('<p style="color:red">IP address not recognized [ one or both argument entered may be inncorrect]</p>'));
+            this.echo($('<p style="color:#FF355E"> IP address not recognized [ one or both argument entered may be inncorrect]!</p>'));
             return;
         }
         t1 = true;
@@ -27,16 +27,18 @@ $('.terminal').terminal({
         setTimeout(function () { element.classList.remove(new_to); }, 11000);
         return "making a connection from " + from + " to " + to;
     },
-    check_connection: function (system) {
-        if (t1) {
-            return "connection estabilished";
+    connection_status: function (ip_address) {
+        if (t1 && ip_address == "192.168.32.1") {
+            this.echo($('<p style="color:#66FF66"> Connection estabilished!</p>'));
+            return;
         } else {
-            return "connection not estabilished";
+            this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
+            return;
         }
     },
     table: function (ip_address) {
         if (ip_address == "122") {
-            this.echo($('<table><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>'));
+            this.echo($('<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>'));
 
         } else {
             return "no table found";
