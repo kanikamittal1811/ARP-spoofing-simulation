@@ -51,7 +51,8 @@
         },
         table: function (ip_address) {
             if (ip_address == "122") {
-                return "saldkasm \n asddasd \t sadasd \n";
+                this.echo($('<table><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>'));
+
             } else {
                 return "no table found";
             }
