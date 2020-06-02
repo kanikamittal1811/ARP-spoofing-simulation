@@ -1,7 +1,6 @@
 var t1 = false;
 (function () {
     document.getElementById("line1").style.display = "none";
-    document.getElementById("line2").style.display = "none";
 })();
 $('.terminal').terminal({
     cat: function (width, height) {
@@ -13,14 +12,15 @@ $('.terminal').terminal({
         });
     },
     team: function () {
-        return "pradyumn jain"
+        return "pradyumn jain | kanika mittal | raghav verma | prahalad v rao"
     },
     connect: function (from, to) {
         var element = document.getElementById(from);
-        if (from == "192.168.32.5") {
+        if (from == "192.168.32.5" && to == "192.168.32.1") {
             var new_to = "client_1_router";
-        } else if (from == "192.168.32.9") {
-            var new_to = "client_2_router";
+        } else {
+            this.echo($('<p style="color:red">IP address not recognized [ one or both argument entered may be inncorrect]</p>'));
+            return;
         }
         t1 = true;
         element.classList.add(new_to);
