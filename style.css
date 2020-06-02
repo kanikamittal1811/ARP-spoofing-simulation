@@ -40,6 +40,20 @@
     height: 63px;
     width: 70px;
 }
+.env-position3{
+    position: fixed;
+    left:49.7%;
+    top: 45%;
+    height: 63px;
+    width: 70px;
+}
+.env-position4{
+    position: fixed;
+    left:18.5%;
+    top: 8%;
+    height: 63px;
+    width: 70px;
+}
 .line-1{
     position: fixed;
     top:30%;
@@ -55,6 +69,14 @@
     transform: rotate(35deg);
     height: 150px;
     width: 450px
+}
+.line-3{
+    position:fixed;
+    top:5%;
+    left:28%;
+    
+    height: 150px;
+    width: 700px
 }
 
 .router_1{
