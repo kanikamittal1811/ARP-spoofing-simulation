@@ -7,32 +7,26 @@
     <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
+<div class="back"></div>
 <div id="t1" class="terminal terminal-1"></div>
-<div class="terminal terminal-2"></div>
+<div id="t2" class="terminal terminal-2"></div>
 
 <body>
-    <img class="envelope_purple env-position1" id="192.168.32.5" src="images/envelope_purple.png">
+    <img class="envelope_green env-position1" id="e1" src="images/envelope_purple.png">
     <img class="laptop_1" src="images/laptop-03.png" width="150" alt="">
-    <img class="envelope_red env-position4" src="images/envelope_red.png">
-    <img class="envelope_purple env-position2" id="192.168.32.9" src="images/envelope_purple.png">
-    <img class="envelope_tick env-position3" src="images/envelope_tick.png">
-    
-    <img class="router_1" src="images/router-01.png" width="150" alt="">
+    <img id="line1" class="line-1" src="images/line.png">
+
+    <img class="envelope_green env-position2" id="e2" src="images/envelope_purple.png">
     <img class="laptop_2" src="images/laptop-03.png" width="150" alt="">
-    <img class="line-1" src="images/line.png">
-    <img class="line-2" src="images/line.png">
+    <img id="line2" class="line-2" src="images/line.png">
+
+    <img class="envelope_red env-position4" src="images/envelope_red.png">
     <img class="line-3" src="images/line.png">
-    
-</body>
-<script>
-    var t1 = false;
-    $('.terminal').terminal({
 
-        cat: function (width, height) {
-            return new Promise(function (resolve) {
-                const img = $('<img src="https://placekitten.com/' +
-                    width + '/' + height + '">');
+    <img class="router_1" src="images/router-01.png" width="150" alt="">
+    <img class="envelope_tick env-position3" src="images/envelope_tick.png">
 
+<<<<<<< HEAD
                 img.on('load', () => resolve(img));
             });
         },
@@ -77,5 +71,12 @@
             greetings: 'Bash --Terminal\n'
         });
 </script>
+=======
+
+</body>
+<script src="./js/user1.js"></script>
+<script src="./js/user2.js"></script>
+</body>
+>>>>>>> 779cfb7d6cb9a24295042afdc346d1a9d1df0733
 
 </html>
