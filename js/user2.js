@@ -1,8 +1,10 @@
 var user2_router = false;
 (function () {
     document.getElementById("line2").style.display = "none";
+    document.getElementById("line3").style.display = "none";
     document.getElementById("e2").style.display = "none";
     document.getElementById("e3").style.display = "none";
+    document.getElementById("e4").style.display="none";
 })();
 $('.terminal-1').terminal({
     cat: function (width, height) {
@@ -56,7 +58,50 @@ $('.terminal-1').terminal({
             this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
             return;
         }
+    },
+    arp_attack_to_client: function(ip_addressclient){
+        if(ip_addressclient!="192.168.32.5"){
+            this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
+            return;
+        }
+        else{
+            //TODO: check for connection b/w client1 and router and client 2 and router
+            //TODO: change table
+            var red_env=document.getElementById("e4");
+            //display red packet
+            red_env.style.display="block";
+            //display momement of red packet to fro
+            red_env.classList.add("attacker_to_client");
+            // establish line
+            setTimeout(function(){
+                document.getElementById("line3").style.display="block"
+            },8500);
+            //hide packet
+            setTimeout(function(){
+                red_env.classList.remove("attacker_to_client")
+                red_env.style.display="none";
+            },8600);
+            //reappear packet
+            setTimeout(function(){
+                red_env.style.display="block";
+            },9100);
+            //packet to and fro to router
+            setTimeout(function(){
+                red_env.classList.add("client_2_router")
+            },9200);
+            //hide victim and router line
+            setTimeout(function(){
+                document.getElementById("line1").style.display="none";
+            },17800);
+            
+            //fix here what to display after attack  
+             return "attack_done";
+            
+
+        }
+
     }
+
 }, {
         greetings: 'Bash --Terminal\n'
     });
