@@ -29,6 +29,13 @@ $('.terminal-2').terminal({
         var element = document.getElementById(new_from);
         element.classList.add(new_to);
         setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 5000);
+        setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 5500);
+        setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 6000);
+        setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 6500);
+        setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 7000);
+        setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 7500);
+        setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 8000);
+        setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 8500);
         setTimeout(function () { element.classList.remove(new_to); document.getElementById("line1").style.display = "block"; }, 10000);
         return "making a connection from " + from + " to " + to;
     },
