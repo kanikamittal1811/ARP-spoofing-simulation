@@ -2,6 +2,7 @@ var user1_router = false;
 (function () {
     document.getElementById("line1").style.display = "none";
     document.getElementById("e1").style.display = "none";
+    document.getElementById("e3").style.display = "none";
 })();
 $('.terminal-2').terminal({
     cat: function (width, height) {
@@ -27,6 +28,7 @@ $('.terminal-2').terminal({
         document.getElementById(new_from).style.display = "block";
         var element = document.getElementById(new_from);
         element.classList.add(new_to);
+        setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 5000);
         setTimeout(function () { element.classList.remove(new_to); document.getElementById("line1").style.display = "block"; }, 10000);
         return "making a connection from " + from + " to " + to;
     },
