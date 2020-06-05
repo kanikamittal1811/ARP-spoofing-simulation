@@ -97,9 +97,7 @@ $('.terminal-1').terminal({
             //fix here what to display after attack  
              return "attack_done";
             
-
         }
-
     }
 
 }, {
