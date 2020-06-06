@@ -4,9 +4,9 @@ var user2_router = false;
     document.getElementById("line3").style.display = "none";
     document.getElementById("e2").style.display = "none";
     document.getElementById("e3").style.display = "none";
-    document.getElementById("e4").style.display="none";
-    document.getElementById("cross-ani").style.display="none";
-    document.getElementById("at_man").style.display="none";
+    document.getElementById("e4").style.display = "none";
+    document.getElementById("cross-ani").style.display = "none";
+    document.getElementById("at_man").style.display = "none";
 })();
 $('.terminal-1').terminal({
     cat: function (width, height) {
@@ -61,60 +61,56 @@ $('.terminal-1').terminal({
             return;
         }
     },
-    arp_attack_to_client: function(ip_addressclient){
-        if(ip_addressclient!="192.168.32.5"){
-            this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
-            return;
-        }
-        else{
-            document.getElementById("at_man").style.display="block";
+    arp_attack_to_client: function (ip_addressclient) {
+        if (ip_addressclient == "192.168.32.5" && user2_router) {
             //TODO: check for connection b/w client1 and router and client 2 and router
             //TODO: change table
-            var red_env=document.getElementById("e4");
+            var red_env = document.getElementById("e4");
             //display red packet
-            red_env.style.display="block";
+            red_env.style.display = "block";
             //display momement of red packet to fro
             red_env.classList.add("attacker_to_client");
             // establish line
-            setTimeout(function(){
-                document.getElementById("line3").style.display="block"
-            },8500);
+            setTimeout(function () {
+                document.getElementById("line3").style.display = "block"
+            }, 8500);
             //hide packet
-            setTimeout(function(){
+            setTimeout(function () {
                 red_env.classList.remove("attacker_to_client")
-                red_env.style.display="none";
-            },8600);
+                red_env.style.display = "none";
+            }, 8600);
             //display cross
-            setTimeout(function(){
-                document.getElementById("cross-ani").style.display="block";
-            },8600);
+            setTimeout(function () {
+                document.getElementById("cross-ani").style.display = "block";
+            }, 8600);
             //hide cross
-            setTimeout(function(){
-                document.getElementById("cross-ani").style.display="none";
-            },9600);
+            setTimeout(function () {
+                document.getElementById("cross-ani").style.display = "none";
+            }, 9600);
             //hide victim and router line
-            setTimeout(function(){
-                document.getElementById("line1").style.display="none";
-            },9600);
+            setTimeout(function () {
+                document.getElementById("line1").style.display = "none";
+            }, 9600);
             //reappear packet
-            setTimeout(function(){
-                red_env.style.display="block";
-            },9600);
+            setTimeout(function () {
+                red_env.style.display = "block";
+            }, 9600);
             //packet to and fro to router
-            setTimeout(function(){
+            setTimeout(function () {
                 red_env.classList.add("client_2_router")
-            },9600);
+            }, 9600);
             //hide packet
-            setTimeout(function(){
-                red_env.style.display="none";
-            },18500);
-            
-            
-            
-            
+            setTimeout(function () {
+                red_env.style.display = "none";
+                document.querySelector(".attacker").style.display = "block";
+            }, 18500);
+
             //fix here what to display after attack  
-             return "attack_done";
-            
+            return "attack_done";
+        }
+        else {
+            this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
+            return;
         }
     }
 

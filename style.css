@@ -23,7 +23,7 @@
     width: 49.5%;
     left:50%;
     bottom: 1%;
-    height: 270px;
+    height: 220px;
     border: 3px solid green;
 }
 .terminal-1{
@@ -31,7 +31,7 @@
     width: 49%;
     bottom: 1%;
     left:0.25%;
-    height: 270px;
+    height: 220px;
     border: 3px solid green;
 }
 .env-position1{
@@ -106,8 +106,7 @@
     top: 45%;
 }
 .attacker{
-    position:none;
-    display: block;
+    position:fixed;
     height:50px;
     width:50px;
     top:9%;
@@ -132,7 +131,6 @@
 .attacker_to_client{
     animation: atc 4s ease-in-out 1s 2 both alternate;
 }
-
 
 
 @keyframes c1r{
