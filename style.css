@@ -105,6 +105,14 @@
     left: 45%;
     top: 45%;
 }
+.attacker{
+    position:fixed;
+    display: block;
+    height:50px;
+    width:50px;
+    top:9%;
+    left:19%
+}
 
 .client_1_router{
   animation: c1r 4s ease-in-out 1s 2 both alternate;
@@ -113,6 +121,10 @@
 .client_2_router{
   animation: c2r 4s ease-in-out 1s 2 both alternate;
 }
+.attacker_to_client{
+    animation: atc 4s ease-in-out 1s 2 both alternate;
+}
+
 
 @keyframes c1r{
   0%{top:8%;left: 76.5%;}
@@ -121,4 +133,16 @@
 @keyframes c2r{
   0%{top:8%;left: 18.5%;}
   100% {top: 45%; left: 49.7%;}
+}
+@keyframes atc{
+    0%{
+        top:8%;
+        left:18.5%;
+
+    }
+    100%{
+        top:8%;
+        left:76.5%;
+
+    }
 }
