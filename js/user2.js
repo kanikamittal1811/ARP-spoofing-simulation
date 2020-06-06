@@ -36,7 +36,7 @@ $('.terminal-1').terminal({
         setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 7500);
         setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 8000);
         setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 8500);
-        setTimeout(function () { element.classList.remove(new_to); document.getElementById("line2").style.display = "block"; }, 10000);
+        setTimeout(function () { element.classList.remove(new_to); document.getElementById("line2").style.display = "block"; document.getElementById(new_from).style.display = "none"; }, 10000);
         return "making a connection from " + from + " to " + to;
     },
     connection_status: function (ip_address) {
