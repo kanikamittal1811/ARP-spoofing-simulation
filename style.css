@@ -115,10 +115,10 @@
 .cross{
     position: fixed;
     display: "fixed";
-    height: 70px;
-    width:70px;
-    left:65%;
-    top:40%;
+    height: 220px;
+    width:220px;
+    left:59%;
+    top:25%;
 }
 
 .client_1_router{

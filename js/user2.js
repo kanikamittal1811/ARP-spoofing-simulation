@@ -5,7 +5,7 @@ var user2_router = false;
     document.getElementById("e2").style.display = "none";
     document.getElementById("e3").style.display = "none";
     document.getElementById("e4").style.display = "none";
-    document.getElementById("cross-ani").style.display = "none";
+    document.getElementById("cross-ani").style.display = "block";
     document.getElementById("at_man").style.display = "none";
 })();
 $('.terminal-1').terminal({
@@ -40,7 +40,9 @@ $('.terminal-1').terminal({
         setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 7500);
         setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 8000);
         setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 8500);
-        setTimeout(function () { element.classList.remove(new_to); document.getElementById("line2").style.display = "block"; document.getElementById(new_from).style.display = "none"; }, 10000);
+        setTimeout(function () {
+            element.classList.remove(new_to); document.getElementById("line2").style.display = "block"; document.getElementById(new_from).style.display = "none";
+        }, 10000);
         return "making a connection from " + from + " to " + to;
     },
     connection_status: function (ip_address) {
@@ -103,10 +105,12 @@ $('.terminal-1').terminal({
             setTimeout(function () {
                 red_env.style.display = "none";
                 document.querySelector(".attacker").style.display = "block";
+
             }, 18500);
 
             //fix here what to display after attack  
-            return "attack_done";
+            this.echo($('<p style="color:#FF355E"> Attack In Progress!</p>'));
+            return;
         }
         else {
             this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
