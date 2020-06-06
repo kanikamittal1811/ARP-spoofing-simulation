@@ -4,8 +4,9 @@ var user2_router = false;
     document.getElementById("line3").style.display = "none";
     document.getElementById("e2").style.display = "none";
     document.getElementById("e3").style.display = "none";
+    document.getElementById("e5").style.display = "none";
     document.getElementById("e4").style.display = "none";
-    document.getElementById("cross-ani").style.display = "block";
+    document.getElementById("cross-ani").style.display = "none";
     document.getElementById("at_man").style.display = "none";
 })();
 $('.terminal-1').terminal({
@@ -67,6 +68,23 @@ $('.terminal-1').terminal({
         if (ip_addressclient == "192.168.32.5" && user2_router) {
             //TODO: check for connection b/w client1 and router and client 2 and router
             //TODO: change table
+            setTimeout(function () { document.getElementById("e5").style.display = "block"; }, 5000);
+            setTimeout(function () { document.getElementById("e5").style.display = "none"; }, 5500);
+            setTimeout(function () { document.getElementById("e5").style.display = "block"; }, 6000);
+            setTimeout(function () { document.getElementById("e5").style.display = "none"; }, 6500);
+            setTimeout(function () { document.getElementById("e5").style.display = "block"; }, 7000);
+            setTimeout(function () { document.getElementById("e5").style.display = "none"; }, 7500);
+            setTimeout(function () { document.getElementById("e5").style.display = "block"; }, 8000);
+            setTimeout(function () { document.getElementById("e5").style.display = "none"; }, 8500);
+
+            setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 13600);
+            setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 14600);
+            setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 15100);
+            setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 15600);
+            setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 16100);
+            setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 16600);
+            setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 17100);
+            setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 17600);
             var red_env = document.getElementById("e4");
             //display red packet
             red_env.style.display = "block";
@@ -75,7 +93,7 @@ $('.terminal-1').terminal({
             // establish line
             setTimeout(function () {
                 document.getElementById("line3").style.display = "block"
-            }, 8500);
+            }, 11000);
             //hide packet
             setTimeout(function () {
                 red_env.classList.remove("attacker_to_client")
@@ -89,10 +107,22 @@ $('.terminal-1').terminal({
             setTimeout(function () {
                 document.getElementById("cross-ani").style.display = "none";
             }, 9600);
+            setTimeout(function () {
+                document.getElementById("cross-ani").style.display = "block";
+            }, 10100);
+            setTimeout(function () {
+                document.getElementById("cross-ani").style.display = "none";
+            }, 10600);
+            setTimeout(function () {
+                document.getElementById("cross-ani").style.display = "block";
+            }, 11100);
+            setTimeout(function () {
+                document.getElementById("cross-ani").style.display = "none";
+            }, 11100);
             //hide victim and router line
             setTimeout(function () {
                 document.getElementById("line1").style.display = "none";
-            }, 9600);
+            }, 11100);
             //reappear packet
             setTimeout(function () {
                 red_env.style.display = "block";

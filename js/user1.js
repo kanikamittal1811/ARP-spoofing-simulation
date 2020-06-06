@@ -1,6 +1,6 @@
 var user1_router = false;
 (function () {
-    document.getElementById("line1").style.display = "block";
+    document.getElementById("line1").style.display = "none";
     document.getElementById("e1").style.display = "none";
     document.getElementById("e3").style.display = "none";
 })();

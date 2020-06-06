@@ -23,7 +23,7 @@
     width: 49.5%;
     left:50%;
     bottom: 1%;
-    height: 220px;
+    height: 260px;
     border: 3px solid green;
 }
 .terminal-1{
@@ -31,10 +31,17 @@
     width: 49%;
     bottom: 1%;
     left:0.25%;
-    height: 220px;
+    height: 260px;
     border: 3px solid green;
 }
 .env-position1{
+    position: fixed;
+    left: 76.5%;
+    top: 8%;
+    height: 63px;
+    width: 70px; 
+}
+.env-position5{
     position: fixed;
     left: 76.5%;
     top: 8%;
