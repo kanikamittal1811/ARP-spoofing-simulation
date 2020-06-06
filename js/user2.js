@@ -5,6 +5,8 @@ var user2_router = false;
     document.getElementById("e2").style.display = "none";
     document.getElementById("e3").style.display = "none";
     document.getElementById("e4").style.display="none";
+    document.getElementById("cross-ani").style.display="none";
+    document.getElementById("at_man").style.display="none";
 })();
 $('.terminal-1').terminal({
     cat: function (width, height) {
@@ -65,6 +67,7 @@ $('.terminal-1').terminal({
             return;
         }
         else{
+            document.getElementById("at_man").style.display="block";
             //TODO: check for connection b/w client1 and router and client 2 and router
             //TODO: change table
             var red_env=document.getElementById("e4");
@@ -81,18 +84,33 @@ $('.terminal-1').terminal({
                 red_env.classList.remove("attacker_to_client")
                 red_env.style.display="none";
             },8600);
-            //reappear packet
+            //display cross
             setTimeout(function(){
-                red_env.style.display="block";
-            },9100);
-            //packet to and fro to router
+                document.getElementById("cross-ani").style.display="block";
+            },8600);
+            //hide cross
             setTimeout(function(){
-                red_env.classList.add("client_2_router")
-            },9200);
+                document.getElementById("cross-ani").style.display="none";
+            },9600);
             //hide victim and router line
             setTimeout(function(){
                 document.getElementById("line1").style.display="none";
-            },17800);
+            },9600);
+            //reappear packet
+            setTimeout(function(){
+                red_env.style.display="block";
+            },9600);
+            //packet to and fro to router
+            setTimeout(function(){
+                red_env.classList.add("client_2_router")
+            },9600);
+            //hide packet
+            setTimeout(function(){
+                red_env.style.display="none";
+            },18500);
+            
+            
+            
             
             //fix here what to display after attack  
              return "attack_done";

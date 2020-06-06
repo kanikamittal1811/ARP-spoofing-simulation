@@ -106,12 +106,20 @@
     top: 45%;
 }
 .attacker{
-    position:fixed;
+    position:none;
     display: block;
     height:50px;
     width:50px;
     top:9%;
     left:19%
+}
+.cross{
+    position: fixed;
+    display: "fixed";
+    height: 70px;
+    width:70px;
+    left:65%;
+    top:40%;
 }
 
 .client_1_router{
@@ -124,6 +132,7 @@
 .attacker_to_client{
     animation: atc 4s ease-in-out 1s 2 both alternate;
 }
+
 
 
 @keyframes c1r{
