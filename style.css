@@ -160,3 +160,26 @@
 
     }
 }
+
+.box {
+    position: fixed;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+    width:fit-content ;
+    height:2em;
+    color: black;
+    background-color: blue;
+  }
+#b1{
+top:21%;
+left:69%;
+}
+#b2{
+    top:55%;
+    left:39%;
+}
+#b3{
+    top:20%;
+    left:11%;
+}
