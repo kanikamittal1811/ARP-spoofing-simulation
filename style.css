@@ -181,5 +181,30 @@ left:69%;
 }
 #b3{
     top:20%;
+    
     left:11%;
+}
+.file{
+    position: fixed;
+    left: 77%;
+    top: 9%;
+    max-height:  0px;
+    width: 50px;
+
+}
+.file_ani{
+    position: fixed;
+    left: 77%;
+    top: 9%;
+    max-height:  40px;
+    width: 50px;
+    animation: file_a 5s ease-in-out 0s 1 normal backwards running ;
+}
+@keyframes file_a{
+    0%{
+        max-height: 0px;
+    }
+    100%{
+        max-width: 40px;
+    }
 }

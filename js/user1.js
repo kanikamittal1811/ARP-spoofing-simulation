@@ -3,6 +3,7 @@ var user1_router = false;
     document.getElementById("line1").style.display = "none";
     document.getElementById("e1").style.display = "none";
     document.getElementById("e3").style.display = "none";
+    document.getElementById("file_arp").style.display="none";
 })();
 $('.terminal-2').terminal({
     cat: function (width, height) {
@@ -56,7 +57,26 @@ $('.terminal-2').terminal({
             this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
             return;
         }
+    },
+    save_table:function(filename){
+        if(filename=="arp.txt"){
+            document.getElementById("file_arp").style.display="block";
+            document.getElementById("file_arp").classList.remove("file");
+            document.getElementById("file_arp").classList.add("file_ani");
+            this.echo($('<p style="color:#66FF66"> Arp table saved in arp.txt!</p>'));
+            return;
+        }
+        else{
+            this.echo($('<p style="color:#ff355e"> cannot create file!</p>')) ;
+            return;
+        }
+    },
+    mitigate_attack: function(){
+        //file blink
+        //cross on top line
+        //back to original connections
     }
+
 }, {
         greetings: 'Bash --Terminal\n'
     });

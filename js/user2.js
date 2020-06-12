@@ -146,7 +146,8 @@ $('.terminal-1').terminal({
             this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
             return;
         }
-    }
+    },
+    
 
 }, {
         greetings: 'Bash --Terminal\n'
