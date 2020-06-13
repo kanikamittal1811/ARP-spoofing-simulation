@@ -7,6 +7,7 @@ var user2_router = false;
     document.getElementById("e5").style.display = "none";
     document.getElementById("e4").style.display = "none";
     document.getElementById("cross-ani").style.display = "none";
+    document.getElementById("cross-ani1").style.display = "none";
     document.getElementById("at_man").style.display = "none";
 })();
 $('.terminal-1').terminal({
@@ -138,7 +139,53 @@ $('.terminal-1').terminal({
 
             }, 18500);
 
-            //fix here what to display after attack  
+            //file blink
+            setTimeout(function () {
+            document.getElementById("file_arp").classList.remove("file_ani");
+            document.getElementById("file_arp").classList.add("file_fixed");    
+            document.getElementById("file_arp").style.display="none";
+            }, 18500);
+            setTimeout(function () {
+                document.getElementById("file_arp").style.display="block";
+            }, 19500);
+            setTimeout(function () {
+                    document.getElementById("file_arp").style.display="none";
+            }, 20500); 
+            setTimeout(function () {
+                document.getElementById("file_arp").style.display="block";
+            }, 21500);   
+
+            
+
+              
+            //cross on top line
+
+            setTimeout(function () {
+                document.getElementById("cross-ani1").style.display = "none";
+            }, 21600);
+            setTimeout(function () {
+                document.getElementById("cross-ani1").style.display = "block";
+            }, 22100);
+            setTimeout(function () {
+                document.getElementById("cross-ani1").style.display = "none";
+            }, 22600);
+            setTimeout(function () {
+                document.getElementById("cross-ani1").style.display = "block";
+            }, 23100);
+            setTimeout(function () {
+                document.getElementById("cross-ani1").style.display = "none";
+            },23600);
+
+
+
+            //back to original connections
+            setTimeout(function () {
+                document.getElementById("line3").style.display = "none"
+            }, 24100);
+            setTimeout(function () {
+                document.getElementById("line1").style.display = "block";
+            }, 24600);
+
             this.echo($('<p style="color:#FF355E"> Attack In Progress!</p>'));
             return;
         }

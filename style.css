@@ -127,6 +127,15 @@
     left:59%;
     top:25%;
 }
+.cross1{
+    position: fixed;
+    display: "fixed";
+    height: 220px;
+    width:220px;
+    left:45%;
+    top:1%;
+
+}
 
 .client_1_router{
   animation: c1r 4s ease-in-out 1s 2 both alternate;
@@ -199,6 +208,13 @@ left:69%;
     max-height:  40px;
     width: 50px;
     animation: file_a 5s ease-in-out 0s 1 normal backwards running ;
+}
+.file_fixed{
+    position: fixed;
+    left: 77%;
+    top: 9%;
+    max-height:  40px;
+    width: 50px;
 }
 @keyframes file_a{
     0%{
