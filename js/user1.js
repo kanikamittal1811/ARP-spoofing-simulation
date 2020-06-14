@@ -3,7 +3,7 @@ var user1_router = false;
     document.getElementById("line1").style.display = "none";
     document.getElementById("e1").style.display = "none";
     document.getElementById("e3").style.display = "none";
-    document.getElementById("file_arp").style.display="none";
+    document.getElementById("file_arp").style.display = "none";
 })();
 $('.terminal-2').terminal({
     cat: function (width, height) {
@@ -49,8 +49,8 @@ $('.terminal-2').terminal({
             return;
         }
     },
-    table: function (ip_address) {
-        if (user1_router && ip_address == "192.168.32.1") {
+    table: function () {
+        if (user1_router) {
             this.echo($('<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>'));
             return;
         } else {
@@ -58,20 +58,22 @@ $('.terminal-2').terminal({
             return;
         }
     },
-    save_table:function(filename){
-        if(filename=="arp.txt"){
-            document.getElementById("file_arp").style.display="block";
+    save_table: function (filename) {
+        if (filename == "arp.txt" && user1_router) {
+            document.getElementById("file_arp").style.display = "block";
             document.getElementById("file_arp").classList.remove("file");
             document.getElementById("file_arp").classList.add("file_ani");
             this.echo($('<p style="color:#66FF66"> Arp table saved in arp.txt!</p>'));
+            // TODO:change the value of tables
+            this.echo($('<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>'));
             return;
         }
-        else{
-            this.echo($('<p style="color:#ff355e"> cannot create file!</p>')) ;
+        else {
+            this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
             return;
         }
     },
-    mitigate_attack: function(){
+    mitigate_attack: function () {
         //file blink
         //cross on top line
         //back to original connections
