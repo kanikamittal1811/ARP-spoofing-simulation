@@ -51,7 +51,7 @@ $('.terminal-2').terminal({
     },
     table: function () {
         if (user1_router) {
-            this.echo($('<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>'));
+            this.echo($(cur_user_table));
             return;
         } else {
             this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
@@ -66,6 +66,7 @@ $('.terminal-2').terminal({
             this.echo($('<p style="color:#66FF66"> Arp table saved in arp.txt!</p>'));
             // TODO:change the value of tables
             this.echo($('<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>'));
+            cur_user_table = '<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>';
             return;
         }
         else {
@@ -73,6 +74,7 @@ $('.terminal-2').terminal({
             return;
         }
     },
+    // TODO: i dont know what is this doin here
     mitigate_attack: function () {
         //file blink
         //cross on top line

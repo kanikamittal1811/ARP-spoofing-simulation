@@ -56,9 +56,9 @@ $('.terminal-1').terminal({
             return;
         }
     },
-    table: function (ip_address) {
-        if (user2_router && ip_address == "192.168.32.9") {
-            this.echo($('<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>'));
+    table: function () {
+        if (user2_router) {
+            this.echo($(cur_user_table));
             return;
         } else {
             this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
@@ -141,23 +141,23 @@ $('.terminal-1').terminal({
 
             //file blink
             setTimeout(function () {
-            document.getElementById("file_arp").classList.remove("file_ani");
-            document.getElementById("file_arp").classList.add("file_fixed");    
-            document.getElementById("file_arp").style.display="none";
+                document.getElementById("file_arp").classList.remove("file_ani");
+                document.getElementById("file_arp").classList.add("file_fixed");
+                document.getElementById("file_arp").style.display = "none";
             }, 18500);
             setTimeout(function () {
-                document.getElementById("file_arp").style.display="block";
+                document.getElementById("file_arp").style.display = "block";
             }, 19500);
             setTimeout(function () {
-                    document.getElementById("file_arp").style.display="none";
-            }, 20500); 
+                document.getElementById("file_arp").style.display = "none";
+            }, 20500);
             setTimeout(function () {
-                document.getElementById("file_arp").style.display="block";
-            }, 21500);   
+                document.getElementById("file_arp").style.display = "block";
+            }, 21500);
 
-            
 
-              
+
+
             //cross on top line
 
             setTimeout(function () {
@@ -174,7 +174,7 @@ $('.terminal-1').terminal({
             }, 23100);
             setTimeout(function () {
                 document.getElementById("cross-ani1").style.display = "none";
-            },23600);
+            }, 23600);
 
 
 
@@ -194,7 +194,7 @@ $('.terminal-1').terminal({
             return;
         }
     },
-    
+
 
 }, {
         greetings: 'Bash --Terminal\n'
