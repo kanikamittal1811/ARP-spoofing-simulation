@@ -58,7 +58,7 @@ $('.terminal-1').terminal({
     },
     table: function () {
         if (user2_router) {
-            this.echo($(cur_user_table));
+            this.echo($(cur_user_table_2));
             return;
         } else {
             this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
@@ -84,7 +84,8 @@ $('.terminal-1').terminal({
             setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 15600);
             setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 16100);
             setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 16600);
-            setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 17100);
+            // TODO:add the new value of the table after the attack
+            setTimeout(function () { document.getElementById("e3").style.display = "block"; cur_user_table_1 = '<table style="color:#66FF66"><tr><th>IP address new</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>' }, 17100);
             setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 17600);
             var red_env = document.getElementById("e4");
             //display red packet
@@ -174,6 +175,8 @@ $('.terminal-1').terminal({
             }, 23100);
             setTimeout(function () {
                 document.getElementById("cross-ani1").style.display = "none";
+                // TODO: add the old value of the table
+                cur_user_table_1 = '<table style="color:#66FF66"><tr><th>IP address old/th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>'
             }, 23600);
 
 

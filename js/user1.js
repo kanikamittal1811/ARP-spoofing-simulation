@@ -51,7 +51,8 @@ $('.terminal-2').terminal({
     },
     table: function () {
         if (user1_router) {
-            this.echo($(cur_user_table));
+            // TODO:
+            this.echo($(cur_user_table_1));
             return;
         } else {
             this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
@@ -64,9 +65,9 @@ $('.terminal-2').terminal({
             document.getElementById("file_arp").classList.remove("file");
             document.getElementById("file_arp").classList.add("file_ani");
             this.echo($('<p style="color:#66FF66"> Arp table saved in arp.txt!</p>'));
-            // TODO:change the value of tables
+            // TODO:change the value of tables both the variables
             this.echo($('<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>'));
-            cur_user_table = '<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>';
+            cur_user_table_1 = '<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>';
             return;
         }
         else {
