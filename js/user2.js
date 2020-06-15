@@ -85,7 +85,7 @@ $('.terminal-1').terminal({
             setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 16100);
             setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 16600);
             // TODO:add the new value of the table after the attack
-            setTimeout(function () { document.getElementById("e3").style.display = "block"; cur_user_table_1 = '<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.1</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td><tr><td>192.168.92.9</td></tr><tr><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>' }, 17100);
+            setTimeout(function () { document.getElementById("e3").style.display = "block"; cur_user_table_1 = '<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.1</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td><tr></tr><td>192.168.92.9</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>' }, 17100);
             setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 17600);
             var red_env = document.getElementById("e4");
             //display red packet
@@ -176,7 +176,7 @@ $('.terminal-1').terminal({
             setTimeout(function () {
                 document.getElementById("cross-ani1").style.display = "none";
                 // TODO: add the old value of the table
-                cur_user_table_1 = '<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.1</td><td>0x1</td><td>0x2</td><td>00:50:56:e4:6c:57</td><td>*</td><td>eth0</td><tr><td>192.168.92.9</td></tr><tr><td>0x1</td><td>0x2</td><td>00:50:56:c0:00:8</td><td>*</td><td>eth0</td></tr></table>'
+                cur_user_table_1 = '<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.1</td><td>0x1</td><td>0x2</td><td>00:50:56:e4:6c:57</td><td>*</td><td>eth0</td></tr><tr><td>192.168.92.9</td><td>0x1</td><td>0x2</td><td>00:50:56:c0:00:8</td><td>*</td><td>eth0</td></tr></table>'
             }, 23600);
 
 
