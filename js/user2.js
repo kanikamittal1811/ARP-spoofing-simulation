@@ -139,22 +139,32 @@ $('.terminal-1').terminal({
                 document.querySelector(".attacker").style.display = "block";
 
             }, 18500);
+            //display popup
+            setTimeout(function(){
+                document.getElementById("popup1").style.visibility="visible";
+                document.getElementById("popup1").style.opacity="1"
+            },18500)
+            //hide popup
+            setTimeout(function(){
+                document.getElementById("popup1").style.visibility="hidden";
+                document.getElementById("popup1").style.opacity="0"
+            },23500)
 
             //file blink
             setTimeout(function () {
                 document.getElementById("file_arp").classList.remove("file_ani");
                 document.getElementById("file_arp").classList.add("file_fixed");
                 document.getElementById("file_arp").style.display = "none";
-            }, 18500);
+            }, 23500);
             setTimeout(function () {
                 document.getElementById("file_arp").style.display = "block";
-            }, 19500);
+            }, 24500);
             setTimeout(function () {
                 document.getElementById("file_arp").style.display = "none";
-            }, 20500);
+            }, 25500);
             setTimeout(function () {
                 document.getElementById("file_arp").style.display = "block";
-            }, 21500);
+            }, 26500);
 
 
 
@@ -163,31 +173,31 @@ $('.terminal-1').terminal({
 
             setTimeout(function () {
                 document.getElementById("cross-ani1").style.display = "none";
-            }, 21600);
+            }, 27600);
             setTimeout(function () {
                 document.getElementById("cross-ani1").style.display = "block";
-            }, 22100);
+            }, 28100);
             setTimeout(function () {
                 document.getElementById("cross-ani1").style.display = "none";
-            }, 22600);
+            }, 28600);
             setTimeout(function () {
                 document.getElementById("cross-ani1").style.display = "block";
-            }, 23100);
+            }, 29100);
             setTimeout(function () {
                 document.getElementById("cross-ani1").style.display = "none";
                 // TODO: add the old value of the table
                 cur_user_table_1 = '<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.32.1</td><td>0x1</td><td>0x2</td><td>00:50:56:e4:6c:57</td><td>*</td><td>eth0</td></tr><tr><td>192.168.32.9</td><td>0x1</td><td>0x2</td><td>00:50:56:c0:00:8</td><td>*</td><td>eth0</td></tr></table>'
-            }, 23600);
+            }, 29100);
 
 
 
             //back to original connections
             setTimeout(function () {
                 document.getElementById("line3").style.display = "none"
-            }, 24100);
+            }, 30100);
             setTimeout(function () {
                 document.getElementById("line1").style.display = "block";
-            }, 24600);
+            }, 30600);
 
             this.echo($('<p style="color:#FF355E"> Attack In Progress!</p>'));
             return;
