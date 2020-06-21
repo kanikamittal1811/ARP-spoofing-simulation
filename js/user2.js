@@ -7,6 +7,7 @@ var user2_router = false;
     document.getElementById("e5").style.display = "none";
     document.getElementById("e4").style.display = "none";
     document.getElementById("cross-ani").style.display = "none";
+    document.getElementById("cross-ani1").style.display = "none";
     document.getElementById("at_man").style.display = "none";
 })();
 $('.terminal-1').terminal({
@@ -55,9 +56,9 @@ $('.terminal-1').terminal({
             return;
         }
     },
-    table: function (ip_address) {
-        if (user2_router && ip_address == "192.168.32.9") {
-            this.echo($('<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.92.2</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>'));
+    table: function () {
+        if (user2_router) {
+            this.echo($(cur_user_table_2));
             return;
         } else {
             this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
@@ -83,7 +84,8 @@ $('.terminal-1').terminal({
             setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 15600);
             setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 16100);
             setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 16600);
-            setTimeout(function () { document.getElementById("e3").style.display = "block"; }, 17100);
+            // TODO:add the new value of the table after the attack
+            setTimeout(function () { document.getElementById("e3").style.display = "block"; cur_user_table_1 = '<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.32.1</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td><tr></tr><td>192.168.32.9</td><td>0x1</td><td>0x2</td><td>00:0c:29:83:06:97</td><td>*</td><td>eth0</td></tr></table>' }, 17100);
             setTimeout(function () { document.getElementById("e3").style.display = "none"; }, 17600);
             var red_env = document.getElementById("e4");
             //display red packet
@@ -137,8 +139,66 @@ $('.terminal-1').terminal({
                 document.querySelector(".attacker").style.display = "block";
 
             }, 18500);
+            //display popup
+            setTimeout(function(){
+                document.getElementById("popup1").style.visibility="visible";
+                document.getElementById("popup1").style.opacity="1"
+            },18500)
+            //hide popup
+            setTimeout(function(){
+                document.getElementById("popup1").style.visibility="hidden";
+                document.getElementById("popup1").style.opacity="0"
+            },23500)
 
-            //fix here what to display after attack  
+            //file blink
+            setTimeout(function () {
+                document.getElementById("file_arp").classList.remove("file_ani");
+                document.getElementById("file_arp").classList.add("file_fixed");
+                document.getElementById("file_arp").style.display = "none";
+            }, 23500);
+            setTimeout(function () {
+                document.getElementById("file_arp").style.display = "block";
+            }, 24500);
+            setTimeout(function () {
+                document.getElementById("file_arp").style.display = "none";
+            }, 25500);
+            setTimeout(function () {
+                document.getElementById("file_arp").style.display = "block";
+            }, 26500);
+
+
+
+
+            //cross on top line
+
+            setTimeout(function () {
+                document.getElementById("cross-ani1").style.display = "none";
+            }, 27600);
+            setTimeout(function () {
+                document.getElementById("cross-ani1").style.display = "block";
+            }, 28100);
+            setTimeout(function () {
+                document.getElementById("cross-ani1").style.display = "none";
+            }, 28600);
+            setTimeout(function () {
+                document.getElementById("cross-ani1").style.display = "block";
+            }, 29100);
+            setTimeout(function () {
+                document.getElementById("cross-ani1").style.display = "none";
+                // TODO: add the old value of the table
+                cur_user_table_1 = '<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.32.1</td><td>0x1</td><td>0x2</td><td>00:50:56:e4:6c:57</td><td>*</td><td>eth0</td></tr><tr><td>192.168.32.9</td><td>0x1</td><td>0x2</td><td>00:50:56:c0:00:8</td><td>*</td><td>eth0</td></tr></table>'
+            }, 29100);
+
+
+
+            //back to original connections
+            setTimeout(function () {
+                document.getElementById("line3").style.display = "none"
+            }, 30100);
+            setTimeout(function () {
+                document.getElementById("line1").style.display = "block";
+            }, 30600);
+
             this.echo($('<p style="color:#FF355E"> Attack In Progress!</p>'));
             return;
         }
@@ -146,7 +206,8 @@ $('.terminal-1').terminal({
             this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
             return;
         }
-    }
+    },
+
 
 }, {
         greetings: 'Bash --Terminal\n'

@@ -127,6 +127,15 @@
     left:59%;
     top:25%;
 }
+.cross1{
+    position: fixed;
+    display: "fixed";
+    height: 220px;
+    width:220px;
+    left:45%;
+    top:1%;
+
+}
 
 .client_1_router{
   animation: c1r 4s ease-in-out 1s 2 both alternate;
@@ -160,3 +169,109 @@
 
     }
 }
+
+.box {
+    position: fixed;
+    border: 2px solid black;
+    margin: 0px;
+    padding: 0px;
+    width:fit-content ;
+    font-display: bold;
+    height:2em;
+    color:whitesmoke;
+    background-color:black;
+  }
+#b1{
+top:21%;
+left:69%;
+}
+#b2{
+    top:55%;
+    left:39%;
+}
+#b3{
+    top:20%;
+    
+    left:11%;
+}
+.file{
+    position: fixed;
+    left: 77%;
+    top: 9%;
+    max-height:  0px;
+    width: 50px;
+
+}
+.file_ani{
+    position: fixed;
+    left: 77%;
+    top: 9%;
+    max-height:  40px;
+    width: 50px;
+    animation: file_a 5s ease-in-out 0s 1 normal backwards running ;
+}
+.file_fixed{
+    position: fixed;
+    left: 77%;
+    top: 9%;
+    max-height:  40px;
+    width: 50px;
+}
+@keyframes file_a{
+    0%{
+        max-height: 0px;
+    }
+    100%{
+        max-width: 40px;
+    }
+}
+
+body{
+background-color:rgb(247, 234, 210);
+/* background-image: linear-gradient(315deg, #facc6b 0%, #fabc3c 74%); */
+
+}
+
+
+
+ .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  } 

@@ -9,16 +9,26 @@
     <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
-<div class="back"></div>
+<!-- <div class="back"></div> -->
 <div id="t1" class="terminal terminal-1"></div>
 <div id="t2" class="terminal terminal-2"></div>
 
 <body>
 
+
     <nav class="navbar navbar-light bg-warning">
         <a class="navbar-brand" href="#"><strong>Play Ground</strong></a>
     </nav>
 
+    <div class="box" id="b1">
+        <p>192.168.32.5</p>
+    </div>
+    <div class="box" id="b2">
+        <p>192.168.32.1</p>
+    </div>
+    <div class="box" id="b3">
+        <p>192.168.32.9</p>
+    </div>
 
     <img class="envelope_green env-position1" id="e1" src="images/envelope_purple.png">
     <img class="laptop_1" src="images/laptop-03.png" width="150" alt="">
@@ -29,17 +39,37 @@
     <img id="line2" class="line-2" src="images/line.png">
     <img id="cross-ani" class="cross" src="images/cross.png">
 
+
     <img class="envelope_red env-position4" id="e4" src="images/envelope_red.png">
+
     <img class="line-3" id="line3" src="images/line.png">
+    <img id="cross-ani1" class="cross1" src="images/cross.png">
 
     <img class="router_1" src="images/router-01.png" width="150" alt="">
 
     <img id="e3" class="envelope_tick env-position3" src="images/envelope_tick.png">
     <img id="e5" class="envelope_tick env-position5" src="images/envelope_tick.png">
     <img class="attacker" id="at_man" src="images/attacker.png">
+    <img class="file" id="file_arp" src="images/txt_file.png">
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Attack done</h2>
+            <h2> Mitigation process started</h2>
+<!--             <div class="content">
+               give short description here! 
+            </div> -->
+        </div>
+    </div>  
+
 
 
 </body>
+<script>
+    // TODO: set the value for both the system intial table value
+    var cur_user_table_1 = '<table style="color:#66FF66"><tr><th>IP address</th><th>HW type</th><th>Flags</th><th>HW address</th><th>Mask</th><th>Device</th></tr><tr><td>192.168.32.1</td><td>0x1</td><td>0x2</td><td>00:50:56:e4:6c:57</td><td>*</td><td>eth0</td></tr><tr><td>192.168.32.9</td><td>0x1</td><td>0x2</td><td>00:50:56:c0:00:8</td><td>*</td><td>eth0</td></tr></table>';
+    var cur_user_table_2;
+</script>
 <script src="./js/user1.js"></script>
 <script src="./js/user2.js"></script>
 </body>
