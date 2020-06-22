@@ -49,7 +49,7 @@ $('.terminal-2').terminal({
             return;
         }
     },
-    table: function () {
+    cur_table: function () {
         if (user1_router) {
             // TODO:
             this.echo($(cur_user_table_1));
@@ -74,12 +74,6 @@ $('.terminal-2').terminal({
             this.echo($('<p style="color:#FF355E"> No connection found [argument provided is either inncorrect or unkown]!</p>'));
             return;
         }
-    },
-    // TODO: i dont know what is this doin here
-    mitigate_attack: function () {
-        //file blink
-        //cross on top line
-        //back to original connections
     }
 
 }, {

@@ -56,7 +56,7 @@ $('.terminal-1').terminal({
             return;
         }
     },
-    table: function () {
+    cur_table: function () {
         if (user2_router) {
             this.echo($(cur_user_table_2));
             return;
@@ -140,15 +140,15 @@ $('.terminal-1').terminal({
 
             }, 18500);
             //display popup
-            setTimeout(function(){
-                document.getElementById("popup1").style.visibility="visible";
-                document.getElementById("popup1").style.opacity="1"
-            },18500)
+            setTimeout(function () {
+                document.getElementById("popup1").style.visibility = "visible";
+                document.getElementById("popup1").style.opacity = "1"
+            }, 18500)
             //hide popup
-            setTimeout(function(){
-                document.getElementById("popup1").style.visibility="hidden";
-                document.getElementById("popup1").style.opacity="0"
-            },23500)
+            setTimeout(function () {
+                document.getElementById("popup1").style.visibility = "hidden";
+                document.getElementById("popup1").style.opacity = "0"
+            }, 23200)
 
             //file blink
             setTimeout(function () {
